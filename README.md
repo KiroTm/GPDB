@@ -1,6 +1,6 @@
 # #Introduction (with FAQs)
 ## What is this?
-A random repository that'll guide you through some basic utility codes that every Discord.js uses or most of them.
+A random repository that'll guide you through some basic utility codes that every Discord.js bot uses or most of them.
 
 ## Why refer your repository when i have million other videos and sources to get such codes from?🤔
 I don't think anyone can answer this question, but to my understanding, i think it'll be good for both us to stick together on this project and help each other out!
