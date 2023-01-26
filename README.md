@@ -23,4 +23,6 @@ You will need to install following packages in your terminal:
 * [Typescript](https://www.npmjs.com/package/typescript)
 * [Discord.js](https://www.npmjs.com/package/discord.js)
 * [Mongoose](https://www.npmjs.com/package/mongoose) 
-Any other required package will be listed at the end of my code, make sure you have the right packages installed before running the code!
+> Note: Any other required package will be listed at the end of my code, make sure you have the right packages installed before running the code!
+
+# #ScreenShots
