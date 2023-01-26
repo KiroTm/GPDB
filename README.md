@@ -6,7 +6,7 @@ A random repository that'll guide you through some basic utility codes that ever
 I don't think anyone can answer this question, but to my understanding, i think it'll be good for both us to stick together on this project and help each other out!
 You can help me by debugging my code files and informing me asap. 
 
-## What if i can't find the code not working and need help?🤔
+## What if my code isn't working and need help?🤔
 If you find yourself in such a situation, i would recommend you to go through the following steps:
 1. Refer the [Discord.js Docs](https://discord.js.org/#/docs/discord.js/14.7.1/). You can always refer from there and return statisfied.
 2. Try searching your query on [stackoverflow](https://stackoverflow.com/) or [google](https://google.com)
