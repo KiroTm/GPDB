@@ -14,7 +14,7 @@ If you find yourself in such a situation, i would recommend you to go through th
 4. After all of this, if you still have questions in your mind, you can Direct Message [me](https://discordapp.com/users/919568881939517460) over discord.
 
 # #Usage (with FAQs)
-## How i use the code you've provided? Do i just copy paste them?🤔
+## How do i use the code you've provided? Do i just copy paste it?🤔
 Most of times copy paste might just work, but you wont learn something from it, it's also better if just analyze the code and do the needful
 
 ## Do i need any special command handler to run these codes?🤔
