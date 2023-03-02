@@ -45,3 +45,4 @@ export async function Datapagination(message: Message, time: Number) {
     });
     await Messagepagination(message, pages, time)
 }
+// Check out "Messagepagination" file and add it to your code before you apply this.
