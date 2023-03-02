@@ -1,5 +1,4 @@
-import { Message } from "discord.js";
-import { EmbedBuilder } from "discord.js";
+import { EmbedBuilder, Message } from "discord.js";
 import { Messagepagination } from "./pagination";
 export async function Datapagination(message: Message, time: Number) {
     const data = [
