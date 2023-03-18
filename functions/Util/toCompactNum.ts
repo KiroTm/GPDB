@@ -19,3 +19,5 @@ function toCompactNum(num: number | string): string {
     }
     return "0";
 }
+
+// Accepts both string and number values!
