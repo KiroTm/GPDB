@@ -54,8 +54,12 @@ export class Utils {
     /**
      * @param {Array<any>} arr - Input an array.    
      */
-    static removeDuplicates(arr: Array<any>) {
-        return [...new Set(arr)]
+    static removeDuplicates(inp: string | Array<any>) {
+        if (typeof inp == 'string') {            
+            return [...new Set(inp)].join('');
+        } else {
+            return [...new Set(inp)]
+        }
     };
 
     /**
