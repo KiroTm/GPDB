@@ -56,7 +56,7 @@ export class Utils {
      */
     static removeDuplicates(inp: string | Array<any>) {
         if (typeof inp == 'string') {            
-            return [...new Set(inp)].join('');
+            return [...new Set(inp.split(' '))].join(' ');
         } else {
             return [...new Set(inp)]
         }
