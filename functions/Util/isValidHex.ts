@@ -1,11 +1,7 @@
-import { Util } from "canvacord"
-export async function isValidHex(hex: string) {
-    if (Util.validateHex(hex) === true) {
+export function isValidHex(hex: string) {
+    if (/^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/.test(hex)) {
         return true
     } else {
         return false
     }
 }
-
-// Required package: "canvacord"
-//Download it via- "https://www.npmjs.com/package/canvacord"
