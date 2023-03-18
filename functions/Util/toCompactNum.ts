@@ -1,4 +1,4 @@
-function toCompactNum(num: number | string): string {
+export function toCompactNum(num: number | string): string {
     if (typeof num === "number") {
         return new Intl.NumberFormat("en", { notation: "compact" }).format(num);
     } else if (typeof num === "string") {
