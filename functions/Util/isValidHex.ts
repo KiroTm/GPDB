@@ -5,3 +5,6 @@ export function isValidHex(hex: string) {
         return false
     }
 }
+
+//console.log(isValidHex("#FFFFFF")) // true
+//console.log(isValidHex("#Hmmm idk random thing")) // false
