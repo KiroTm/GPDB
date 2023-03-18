@@ -3,3 +3,5 @@ export function toTitleCase(str: string) {
         return txt.charAt(0).toUpperCase() + txt.substring(1).toLowerCase();
     });
 }
+
+//console.log(toTitleCase("hi hi")) //Hi Hi
