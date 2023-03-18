@@ -2,7 +2,7 @@ function toCompactNum(num: number | string): string {
     if (typeof num === "number") {
         return new Intl.NumberFormat("en", { notation: "compact" }).format(num);
     } else if (typeof num === "string") {
-        const abbrev = ["", "k", "M", "B", "T", "Qa", "Qi", "Sx", "Sp", "Oc", "No", "Dc", "Ud", "Dd", "Td", "Qad", "Qid", "Sxd", "Spd", "Ocd", "Nod", "V", "Uv", "Dv", "Tv", "Qav", "Qiv", "Sxv", "Spv", "Ocv", "Nov", "C", "Uc", "Dc", ];
+        const abbrev = ["", "k", "M", "B", "T", "Qa", "Qi", "Sx", "Sp", "Oc", "No", "Dc", "Ud", "Dd", "Td", "Qad", "Qid", "Sxd", "Spd", "Ocd", "Nod", "V", "Uv", "Dv", "Tv", "Qav", "Qiv", "Sxv", "Spv", "Ocv", "Nov", "C", "Uc", "Dc"];
         const numValue = parseInt(num, 10);
         if (isNaN(numValue) || numValue < 0) {
             return "0";
