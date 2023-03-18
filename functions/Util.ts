@@ -97,7 +97,7 @@ export class Utils {
         if (typeof num === "number") {
             return new Intl.NumberFormat("en", { notation: "compact" }).format(num);
         } else if (typeof num === "string") {
-            const abbrev = ["", "k", "M", "B", "T", "Qa", "Qi", "Sx", "Sp", "Oc", "No", "Dc", "Ud", "Dd", "Td", "Qad", "Qid", "Sxd", "Spd", "Ocd", "Nod", "V", "Uv", "Dv", "Tv", "Qav", "Qiv", "Sxv", "Spv", "Ocv", "Nov", "C", "Uc", "Dc"];
+            const abbrev = ["", "k", "M", "B", "T", "Qa", "Qi", "Sx", "Sp", "Oc", "No", "Dc", "Ud", "Dd", "Td", "Qad", "Qid", "Sxd", "Spd", "Ocd", "Nod", "V"];
             const numValue = parseInt(num, 10);
             if (isNaN(numValue) || numValue < 0) {
                 return "0";
@@ -110,7 +110,7 @@ export class Utils {
                 abbrev.length - 1
             );
             const roundedNum = (numValue / Math.pow(10, exponent * 3)).toFixed(1);
-            return `${roundedNum.replace(/\.0$/, "")}${abbrev[exponent]}`;
+            return `${roundedNum.replace(/\.0$/, "")}${abbrev[exponent]}`.replace(`${abbrev[abbrev.length - 1]}`, '');
         }
         return "0";
     }
