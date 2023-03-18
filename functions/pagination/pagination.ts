@@ -1,13 +1,6 @@
 import { Message, EmbedBuilder, ButtonBuilder, ButtonStyle, ActionRowBuilder, Interaction } from "discord.js"
-
-export async function Messagepagination(message: Message, pages: EmbedBuilder[], time: Number) {
-    // run through a bunch of argument checks
-    if (!message) throw new Error("Pass a message, not an interaction")
+export async function Messagepagination(message: Message, pages: EmbedBuilder[], time: number) {
     if (!pages) throw new Error("Provide atleast 2 pages!")
-    if (!Array.isArray(pages)) throw new Error("Provide an array for pages!")
-    if (typeof time !== "number") throw new Error("Time must be a number in miliseconds")
-    if (time < 30000) throw new Error("Time must be greater than 30 seconds!")
-    // if the pages.length === 1 
     if (pages.length === 1) {
         const page = await message.channel.send({
             embeds: pages,
@@ -15,27 +8,26 @@ export async function Messagepagination(message: Message, pages: EmbedBuilder[],
         })
         return page
     } else {
-        //else continue adding buttons
         const prev = new ButtonBuilder()
             .setCustomId(`${message.id}prev`)
-            .setEmoji("◀️")
+            .setEmoji(`◀️`)
             .setStyle(ButtonStyle.Primary)
             .setDisabled(true)
         const next = new ButtonBuilder()
             .setCustomId(`${message.id}next`)
-            .setEmoji("▶️")
+            .setEmoji(`▶️`)
             .setStyle(ButtonStyle.Primary)
             .setDisabled(false)
 
         const home = new ButtonBuilder()
             .setCustomId(`${message.id}home`)
-            .setEmoji("⏮️")
+            .setEmoji(`⏮️`)
             .setStyle(ButtonStyle.Primary)
             .setDisabled(true)
 
         const end = new ButtonBuilder()
             .setCustomId(`${message.id}end`)
-            .setEmoji("⏭️")
+            .setEmoji(`⏭️`)
             .setStyle(ButtonStyle.Primary)
             .setDisabled(false)
 
@@ -46,7 +38,6 @@ export async function Messagepagination(message: Message, pages: EmbedBuilder[],
             embeds: [pages[index].setFooter({ text: `Page ${index + 1} of ${pages.length}` })],
             components: [row]
         })
-        // Create a component collector
         const filter = (btn: Interaction) => {
             return btn.user.id === message.author.id
         }
@@ -54,7 +45,6 @@ export async function Messagepagination(message: Message, pages: EmbedBuilder[],
             filter,
             time: time
         });
-        // Alter index upon button clicks
         collector.on('collect', async (i) => {
             if (i.customId === `${message.id}prev`) {
                 if (index > 0) index--;
@@ -89,12 +79,11 @@ export async function Messagepagination(message: Message, pages: EmbedBuilder[],
         collector.on('end', async () => {
             row.components.forEach((c) => c.setDisabled(true))
             await currentpage.edit({
-                embeds: [pages[index].setColor('Red').setFooter({ text: `Page ${index + 1} of ${pages.length}` })],
+                embeds: [pages[index].setFooter({ text: `Page ${index + 1} of ${pages.length}` })],
                 components: [row]
             });
         });
         // return the page currently being viewed after collector end
         return currentpage;
     }
-
 }
