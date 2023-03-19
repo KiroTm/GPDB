@@ -26,4 +26,8 @@ You will need to install following packages in your terminal:
 > Note: Any other required package will be listed at the end of my code, make sure you have the right packages installed before running the code!
 
 # #ScreenShots
-![tutorial](https://user-images.githubusercontent.com/123480557/214896769-433d52cf-a8a6-4d60-b082-74aabbb53b6f.gif)
+
+
+
+https://user-images.githubusercontent.com/123480557/226183179-e05705c9-ed6a-4fb9-8e92-d98fbf6f0c0f.mp4
+
