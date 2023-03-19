@@ -52,7 +52,7 @@ export class Utils {
     };
 
     /**
-     * @param {Array<any>} arr - Input an array.    
+     * @param {Array<any>} inp - Input an array.    
      */
     static removeDuplicates(inp: string | Array<any>) {
         if (typeof inp == 'string') {            
